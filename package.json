@@ -1,5 +1,5 @@
 {
-  "name": "eslint-heimdall",
+  "name": "eslint-plugin-heimdall",
   "version": "0.0.0",
   "description": "Eslint rules for ragnarok project",
   "keywords": [

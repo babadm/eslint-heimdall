@@ -32,42 +32,42 @@ ruleTester.run("no-concat-with-plus-operator", rule, {
             code: "let foo = 'hello' + 'world'",
             errors: [{
                 messageId: "noPlusConcatenation",
-                type: "Program"
+                type: "VariableDeclarator"
             }]
         },
         {
           code: "let foo = 'hello' + 1",
           errors: [{
               messageId: "noPlusConcatenation",
-              type: "Program"
+              type: "VariableDeclarator"
           }]
         },
         {
           code: "let foo = 21 + 'guns'",
           errors: [{
               messageId: "noPlusConcatenation",
-              type: "Program"
+              type: "VariableDeclarator"
           }]
         },
         {
           code: "let foo = bar + 'world'",
           errors: [{
               messageId: "noPlusConcatenation",
-              type: "Program"
+              type: "VariableDeclarator"
           }]
         },
         {
           code: "'b' + 'a' + + 'a' + 'a'",
           errors: [{
             messageId: "noPlusConcatenation",
-            type: "Program"
+            type: "BinaryExpression"
         }]
         },
         {
           code: "'d' + 1 + 0 + 0",
           errors: [{
             messageId: "noPlusConcatenation",
-            type: "Program"
+            type: "BinaryExpression"
         }]
         }
     ]

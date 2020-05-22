@@ -31,7 +31,7 @@ ruleTester.run("no-use-var", rule, {
             code: "var foo = \"bar\"",
             errors: [{
                 messageId: "noVar",
-                type: "Program"
+                type: "VariableDeclaration"
             }]
         }
     ]

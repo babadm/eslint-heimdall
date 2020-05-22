@@ -29,7 +29,7 @@ ruleTester.run("no-assign-this", rule, {
             code: "let foo = this",
             errors: [{
                 messageId: "noAssignThis",
-                type: "Program"
+                type: "VariableDeclarator"
             }]
         }
     ]

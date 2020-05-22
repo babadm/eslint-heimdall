@@ -30,31 +30,31 @@ ruleTester.run("no-promise-then-catch", rule, {
             code: "promise.then(function foo(){})",
             errors: [{
                 messageId: "noThen",
-                type: "Program"
+                type: "MemberExpression"
             }]
         },
         {
           code: "promise.then(function foo(){})",
           errors: [{
               messageId: "noThen",
-              type: "Program"
+              type: "MemberExpression"
           }]
       },
         {
           code: "promise.catch(function foo(){})",
           errors: [{
               messageId: "noCatch",
-              type: "Program"
+              type: "MemberExpression"
           }]
         },
         {
           code: "promise.then(function foo(){}).catch(function foo(){})",
           errors: [{
               messageId: "noThen",
-              type: "Program"
+              type: "MemberExpression"
           },{
             messageId: "noCatch",
-            type: "Program"
+            type: "MemberExpression"
         }]
       }
     ]

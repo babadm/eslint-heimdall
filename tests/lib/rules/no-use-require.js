@@ -31,7 +31,7 @@ ruleTester.run("no-use-require", rule, {
             code: "let foo = require(\"bar\")",
             errors: [{
                 messageId: "noRequire",
-                type: "Program"
+                type: "VariableDeclaration"
             }]
         }
     ]
